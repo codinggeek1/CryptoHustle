@@ -1,38 +1,89 @@
-import React from 'react'
-import img from '../assets/bg.png'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import img from '../assets/bg.png';
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
   const navigate = useNavigate();
-  const navCreateProj = () =>{
-    navigate("/createproject")
-  }
-  const navExplore = () =>{
-    navigate("/projects")
-  }
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
+
+  const navCreateProj = () => {
+    navigate('/createproject');
+  };
+
+  const navExplore = () => {
+    navigate('/projects');
+  };
+
   return (
-    <div className='text-white mt-20'>
+    <div
+      className={`text-white mt-20`}
+      style={{
+        background: 'linear-gradient(to right, #000000, #00007F, #FFFFFF)',
+        animation: `${fadeIn ? 'fade-in 1s' : ''}`,
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+        <div style={{ alignSelf: 'center' }}>
+          <p style={{ fontSize: '6rem', textAlign: 'justify' }}>
+            Find <span style={{ color: '#00007F', lineHeight: '10rem' }}>Freelancers</span>
+            <br />
+            for Your <span style={{ color: '#00007F', lineHeight: '10rem' }}>Pro</span> Gigs
+          </p>
+          <p style={{ fontSize: '1.5rem', lineHeight: '2.5rem' }}>
+            Join our platform today and start finding the perfect freelancer for your projects
+          </p>
 
-          <div className='md:flex justify-evenly '>
-               <div className=' my-auto'>
-                <p className='text-6xl text-justify '>
-                Find <span className='text-[#CB1C8D] leading-10'>Freelancers</span><br />for Your <span className='text-[#CB1C8D] leading-10'>Pro</span> Gigs</p>
-                <p className='text-xl leading-10'>Join our platform today and start finding the perfect freelancer for your projects</p>
-
-                <button className='bg-[#CB1C8D] rounded-md px-5 py-2 mt-5
-                 ' onClick={navExplore}>explore</button>
-                <button className='bg-[#FFF] text-bold text-[#CB1C8D] ml-5 rounded-md px-5 py-2 mt-5' onClick={navCreateProj}>create project</button>
-               </div>
-               <div className=''>
-                  <img src={img} alt="" />
-               </div>
-          </div>
-          <div className='p-10 rounded-md stats flex justify-evenly mx-auto md:text-3xl bg-[#CB1C8D]'>
-              <p>2+ projects </p>
-              <p>2+ freelancers</p>
-              <p>3+ active users</p>
-          </div>
+          <button
+            style={{
+              backgroundColor: '#00007F',
+              borderRadius: '0.5rem',
+              padding: '0.5rem 1rem',
+              marginTop: '1rem',
+              color: '#FFFFFF',
+            }}
+            onClick={navExplore}
+          >
+            explore
+          </button>
+          <button
+            style={{
+              backgroundColor: '#FFFFFF',
+              fontWeight: 'bold',
+              color: '#00007F',
+              marginLeft: '1rem',
+              borderRadius: '0.5rem',
+              padding: '0.5rem 1rem',
+              marginTop: '1rem',
+            }}
+            onClick={navCreateProj}
+          >
+            create project
+          </button>
+        </div>
+        <div>
+          <img src={img} alt='' />
+        </div>
+      </div>
+      <div
+        style={{
+          padding: '2rem',
+          borderRadius: '0.5rem',
+          display: 'flex',
+          justifyContent: 'space-evenly',
+          fontSize: '3rem',
+          background: 'linear-gradient(to right, #000000, #009193, #FFFFFF)',
+        }}
+      >
+        <p>2+ projects</p>
+        <p>2+ freelancers</p>
+        <p>3+ active users</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
