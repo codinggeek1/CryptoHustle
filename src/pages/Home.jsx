@@ -29,9 +29,9 @@ const Home = () => {
       <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
         <div style={{ alignSelf: 'center' }}>
           <p style={{ fontSize: '6rem', textAlign: 'justify' }}>
-            Find <span style={{ color: '#00007F', lineHeight: '10rem' }}>Freelancers</span>
+            Find <span style={{ color: '#CB1C8D', lineHeight: '10rem' }}>Freelancers</span>
             <br />
-            for Your <span style={{ color: '#00007F', lineHeight: '10rem' }}>Pro</span> Gigs
+            for Your <span style={{ color: '#CB1C8D', lineHeight: '10rem' }}>Pro</span> Gigs
           </p>
           <p style={{ fontSize: '1.5rem', lineHeight: '2.5rem' }}>
             Join our platform today and start finding the perfect freelancer for your projects
@@ -39,7 +39,7 @@ const Home = () => {
 
           <button
             style={{
-              backgroundColor: '#00007F',
+              backgroundColor: '#CB1C8D',
               borderRadius: '0.5rem',
               padding: '0.5rem 1rem',
               marginTop: '1rem',
@@ -53,7 +53,7 @@ const Home = () => {
             style={{
               backgroundColor: '#FFFFFF',
               fontWeight: 'bold',
-              color: '#00007F',
+              color: '#CB1C8D',
               marginLeft: '1rem',
               borderRadius: '0.5rem',
               padding: '0.5rem 1rem',
