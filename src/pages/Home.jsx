@@ -75,7 +75,7 @@ const Home = () => {
           display: 'flex',
           justifyContent: 'space-evenly',
           fontSize: '3rem',
-          background: 'linear-gradient(to right, #000000, #009193, #FFFFFF)',
+          background: 'linear-gradient(to right, #000000, #00007F, #FFFFFF)',
         }}
       >
         <p>2+ projects</p>
