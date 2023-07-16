@@ -17,7 +17,7 @@ function Navbar() {
         <div>
             <div className="flex  text-center  pt-6  justify-evenly text-white ">
                 <div className="my-auto text-4xl">
-                   <a href="/">Pro<span className="text-[#CB1C8D]">Gigs</span> </a> 
+                   <a href="/">Talent<span className="text-[#CB1C8D]">Sync</span> </a> 
                 </div>
                 <div className="flex">
                     {navlinks.map((data) => (
