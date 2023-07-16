@@ -22,7 +22,7 @@ const Home = () => {
     <div
       className={`text-white mt-20`}
       style={{
-        background: 'linear-gradient(to right, #000000, #00007F, #FFFFFF)',
+        background: 'linear-gradient(to right, #000000, #009193, #FFFFFF)',
         animation: `${fadeIn ? 'fade-in 1s' : ''}`,
       }}
     >
@@ -75,7 +75,7 @@ const Home = () => {
           display: 'flex',
           justifyContent: 'space-evenly',
           fontSize: '3rem',
-          background: 'linear-gradient(to right, #000000, #00007F, #FFFFFF)',
+          background: 'linear-gradient(to right, #000000, #009193, #FFFFFF)',
         }}
       >
         <p>2+ projects</p>
