@@ -7,9 +7,9 @@ import { ethers } from 'ethers';
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-  const { contract } = useContract('0x8287aF624B94d087Ec33708f1243A094c8FF4d32');
+  const { contract } = useContract('0x34b380B029FfdE623E2Fa99f285AC060cd8a5cb0');
 
-  const {contract : userContract} = useContract('0x34b380B029FfdE623E2Fa99f285AC060cd8a5cb0');
+  const {contract : userContract} = useContract('0x8287aF624B94d087Ec33708f1243A094c8FF4d32');
   const { mutateAsync: updateUserProfile } = useContractWrite(userContract, "updateUserProfile")
   const address = useAddress();
   // const {mutateAsync : users} = useContractRead(userContract,"users")
