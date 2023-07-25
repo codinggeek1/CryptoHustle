@@ -1,6 +1,6 @@
 import React, { useContext, createContext } from 'react';
 
-import { useAddress, useContract, useContractWrite ,} from '@thirdweb-dev/react';
+import { useAddress, useContract, useContractWrite , useContractRead } from '@thirdweb-dev/react';
 import { ethers } from 'ethers';
 
 
