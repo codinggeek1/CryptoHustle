@@ -12,7 +12,7 @@ export const StateContextProvider = ({ children }) => {
   const {contract : userContract} = useContract('0x33f07Df2E667f29994BE7344886e265dCe3Fb6a5');
   const { mutateAsync: updateUserProfile } = useContractWrite(userContract, "updateUserProfile")
   const address = useAddress(0x87684B126Ceb30f616Eb3d084795Ac39C356413F);
-  // const {mutateAsync : users} = useContractRead(userContract,"users")
+  const {mutateAsync : users} = useContractRead(userContract,"users")
   const updateProfile = async (form) => {
     try {
       const data = await updateUserProfile([
